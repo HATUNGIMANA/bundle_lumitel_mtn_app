@@ -1,4 +1,3 @@
-# balance = float(input("Welcome User, Please enter your balance"))
 balance = 500 #alternative
 
 def restrict(a):
@@ -36,6 +35,15 @@ def bundle_1():
         2. 3 day package = 650
         3. 1 week package = 1000
         0. Back""")
+    
+def bundle_2():
+    print("""
+        Regular bundles
+        1. 200MB = 250 
+        2. 700 MB  = 650
+        3. 2 GB = 1000
+        0. Back""")
+
         
 def forWho():
     print("""
@@ -114,6 +122,26 @@ elif sel_1 == 1:
                      
          elif sel1A1 == "0":
              bundle_options()
+     if sel1A == "2":
+         bundle_2()
+         reg_bundle = int(input())
+         if reg_bundle == 1:
+             forWho()
+             reg_bundle_benef = int(input())
+             if reg_bundle_benef == 1:
+                 confirm("200 MB for 250", "yourself")
+                 sel01c = input()
+                 if sel01c == "1":
+                     successful("200 MB for 250", "yourself")
+             elif reg_bundle_benef == 2:
+                recipient1c = input("Enter the number of the recepient:")
+                confirm("200 MB for 250", recipient1c)
+                sel02c = input()
+                if sel02c == "1":
+                     successful("200 MB for 250", recipient1c)
+                 
+                 
+    
 else:
     print("Wrong input, Try again")
     main_menu()
